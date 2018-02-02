@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PropertyContainer = styled.div`
-  border: 1px solid #e7e7e7; 
+  position: relative; 
 `;
 
 export const Image = styled.div`
@@ -14,10 +14,13 @@ export const Image = styled.div`
 
 export const PropertyData = styled.div`
   padding: 30px; 
+  border: 1px solid #e7e7e7; 
+  border-top: none;   
 `;
 
 export const Title = styled.div`
-  font-size: 13px; 
+  font-size: 15px;
+  line-height: 20px;  
   color: #5f5f5f;
   font-weight: 700;  
   height: 65px; 
@@ -61,4 +64,17 @@ export const Rooms = styled.div`
 
 export const Meters = styled.div`
   padding: 0 13px; 
+`;
+
+export const Purpose = styled.div`
+  position: absolute; 
+  left: 21px; 
+  top: 23px; 
+  border-radius: 2px; 
+  background: white; 
+  padding: 10px; 
+  color: #bababa; 
+  font-weight: 700; 
+  font-size: 12px; 
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 `;

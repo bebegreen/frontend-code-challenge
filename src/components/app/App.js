@@ -18,6 +18,7 @@ export default class App extends Component {
     fetch('https://api.mcmakler.de/v1/advertisements')
       .then(res => res.json())
       .then(({ data }) => {
+        console.log(data.slice(0, 100))
         this.setState({
           loading: false,
           properties: data.slice(0, 10)
@@ -37,17 +38,19 @@ export default class App extends Component {
             <BarLoader />
           </Spinner>
         }
-        <PropertiesContainer>
-          {
-            properties &&
-            properties.map(property => (
-              <Property
-                key={property.additionalId}
-                property={property}
-              />
-            ))
-          }
-        </PropertiesContainer>
+        {
+          properties &&
+          <PropertiesContainer>
+            {
+              properties.map(property => (
+                <Property
+                  key={property.additionalId}
+                  property={property}
+                />
+              ))
+            }
+          </PropertiesContainer>
+        }
       </div>
     )
   }

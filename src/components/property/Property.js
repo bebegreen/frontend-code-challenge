@@ -9,7 +9,8 @@ import {
   Price,
   Size,
   Rooms, 
-  Meters
+  Meters, 
+  Purpose
 } from './property.styled';
 
 const Property = ({ property }) => {
@@ -21,6 +22,7 @@ const Property = ({ property }) => {
       numberOfRooms,
       space
     },
+    purpose,
     advertisementPrice: { baseRent }
   } = property;
 
@@ -29,6 +31,10 @@ const Property = ({ property }) => {
     <PropertyContainer>
      
       <Image url={advertisementAssets[0].advertisementThumbnails.inventory_m.url} />
+
+      <Purpose> 
+        {purpose ? 'Mieten' : 'Kaufen'}
+      </Purpose>
 
       <PropertyData>
         <Title> {title} </Title>
@@ -44,7 +50,7 @@ const Property = ({ property }) => {
               {numberOfRooms} Zimmer
             </Rooms>
             <Meters>
-              ab {space.toFixed(0)} m2
+              ab {space.toFixed(0)} m&#178;
             </Meters>
           </Size>
         </PriceAndSize>
