@@ -10,8 +10,8 @@ module.exports = {
   },
   module: {
     rules: [
-      { test:/\.js$/, use: 'babel-loader' , exclude: /node_modules/ },
-    //  { test:/\.css$/, use: ['style-loader','css-loader'] },
+      { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
+      //  { test:/\.css$/, use: ['style-loader','css-loader'] },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
@@ -24,17 +24,17 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin("static/css/globals.css"),
     new CopyWebpackPlugin([
-          { from: 'src/index.html' },
-          { from: 'src/static/icons' , to: 'static/icons'},
-      ])
+      { from: 'src/index.html' },
+      { from: 'src/static/icons', to: 'static/icons' },
+    ])
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 3000,
-    stats:"minimal",
-    open:true,
-    openPage:""
+    stats: "minimal",
+    open: true,
+    openPage: ""
   },
-  devtool:"source-map"
+  devtool: "source-map"
 };

@@ -9,7 +9,6 @@ export const Image = styled.div`
   background-size: cover; 
   width: 100%; 
   height: 220px;
-    
 `;
 
 export const PropertyData = styled.div`
