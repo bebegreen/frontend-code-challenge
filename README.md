@@ -1,6 +1,6 @@
 # Front-End Interview Test
 
-      npm install -> npm run serve 
+      npm install -> npm start 
 
 In my implementation for this test I have chosen to use React. 
 I love this framework and It's simplicity.

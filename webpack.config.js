@@ -24,8 +24,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin("static/css/globals.css"),
     new CopyWebpackPlugin([
-      { from: 'src/index.html' },
-      { from: 'src/static/icons', to: 'static/icons' },
+      { from: 'src/index.html' }
     ])
   ],
   devServer: {
