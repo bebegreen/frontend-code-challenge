@@ -37,7 +37,7 @@ const Property = ({ property }) => {
       </Purpose>
 
       <PropertyData>
-        <Title> {title} </Title>
+        <Title> {title.substring(0, 70)} </Title>
 
         <Address>
           {postalCode + ' ' + city}

@@ -9084,7 +9084,7 @@ var Property = function Property(_ref) {
         _property.Title,
         null,
         ' ',
-        title,
+        title.substring(0, 70),
         ' '
       ),
       _react2.default.createElement(
