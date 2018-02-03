@@ -17,6 +17,9 @@ export const PropertiesContainer = styled.div`
   max-width: 1300px;
   margin: 0 auto;
   animation: ${fadein} 2s; 
+  @media (max-width: 425px) {
+    padding: 5px; 
+  }
 `;
 
 export const Spinner = styled.div`
